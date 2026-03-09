@@ -24,6 +24,7 @@ app.use(
 );
 
 app.use("/", storeRouter);
+console.log("Routes loaded");
 // app.use("/auth", authRouter);
 // app.use("/products", productRouter);
 // app.use("/users", userRouter);
@@ -32,6 +33,7 @@ const startServer = async () => {
   await dbConnect();
   app.listen(5000, () => {
     console.log("Server Started");
+    console.log("Routes loaded");
   });
 };
 
